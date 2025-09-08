@@ -41,6 +41,7 @@ form label {
 /* Estilos para inputs y textarea */
 input[type="text"],
 input[type="email"],
+input[type="password"],
 textarea {
     width: 100%; /* Ocupa todo el ancho del contenedor */
     padding: 0.5rem; /* Espaciado interno cómodo */
@@ -56,6 +57,7 @@ textarea {
 /* Efecto al enfocar inputs y textarea */
 input[type="text"]:focus,
 input[type="email"]:focus,
+input[type="password"]:focus,
 textarea:focus {
     outline: none; /* Sin borde por defecto del navegador */
     border-color: #FFC0CB; /* Destacado rosa suave */
