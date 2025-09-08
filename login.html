@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Iniciar Sesión</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card p-4 shadow" style="max-width: 400px; width: 100%;">
+      <h2 class="mb-4 text-center">Iniciar Sesión</h2>
+      <form id="loginForm" novalidate>
+        <div class="mb-3">
+          <label for="usuario" class="form-label">Usuario</label>
+          <input type="text" class="form-control" id="usuario" placeholder="Ingresa tu usuario" required />
+        </div>
+        <div class="mb-3">
+          <label for="contrasena" class="form-label">Contraseña</label>
+          <input type="password" class="form-control" id="contrasena" placeholder="Ingresa tu contraseña" required />
+        </div>
+        <div class="form-check mb-3">
+          <input type="checkbox" class="form-check-input" id="recordarme" />
+          <label class="form-check-label" for="recordarme">Recordarme</label>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+      </form>
+      <div id="loginSuccess" class="alert alert-success mt-3 d-none" role="alert">
+        ¡Inicio de sesión exitoso!
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('loginForm');
+    const successMessage = document.getElementById('loginSuccess');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      if (form.checkValidity()) {
+        successMessage.classList.remove('d-none');
+        form.reset();
+      } else {
+        successMessage.classList.add('d-none');
+        form.reportValidity();
+      }
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
