@@ -72,12 +72,20 @@
       <button type="submit" class="button">Registrar</button>
     </form>
 
-    <div id="mensajeExito" class="success-msg" role="alert" style="margin-top: 1rem;">
-      🎉 Registro realizado con éxito 🎉
+    <div id="mensajeExito" class="success-msg d-none" role="alert" style="margin-top: 1rem;">
+    🎉 Registro realizado con éxito 🎉
     </div>
   </main>
 
   <script>
+    // Esperar que el DOM esté cargado para ocultar mensaje si está visible por algún motivo
+    document.addEventListener('DOMContentLoaded', () => {
+    const mensajeExito = document.getElementById('mensajeExito');
+    if (mensajeExito) {
+        mensajeExito.classList.add('d-none'); // Ocultar mensaje al cargar la página
+    }
+    });
+
     // Referencias
     const form = document.getElementById('registroForm');
     const mensajeExito = document.getElementById('mensajeExito');
@@ -86,47 +94,52 @@
 
     // Mapa de comunas por región simple para ejemplo
     const comunasPorRegion = {
-      'RM': ['Santiago', 'Puente Alto', 'Las Condes'],
-      'Linares': ['Colbún', 'Longaví', 'Villa Alegre'],
-      'Araucania': ['Temuco', 'Villarrica', 'Pucón'],
-      'Nuble': ['Chillán', 'Bulnes', 'Yungay']
+    'RM': ['Santiago', 'Puente Alto', 'Las Condes'],
+    'Linares': ['Colbún', 'Longaví', 'Villa Alegre'],
+    'Araucania': ['Temuco', 'Villarrica', 'Pucón'],
+    'Nuble': ['Chillán', 'Bulnes', 'Yungay']
     };
 
     // Cambiar opciones comuna según región
     region.addEventListener('change', () => {
-      const seleccion = region.value;
-      comuna.innerHTML = '<option value="">-- Seleccione la comuna --</option>';
-      if (comunasPorRegion[seleccion]) {
+    const seleccion = region.value;
+    comuna.innerHTML = '<option value="">-- Seleccione la comuna --</option>';
+    if (comunasPorRegion[seleccion]) {
         comunasPorRegion[seleccion].forEach(c => {
-          const option = document.createElement('option');
-          option.value = c;
-          option.textContent = c;
-          comuna.appendChild(option);
+        const option = document.createElement('option');
+        option.value = c;
+        option.textContent = c;
+        comuna.appendChild(option);
         });
-      }
+    }
     });
 
-    // Validación del formulario
+    // Validación del formulario y manejo del mensaje de éxito
     form.addEventListener('submit', function (event) {
-      event.preventDefault();
-      // Validar que contraseñas coincidan
-      const pass = form.contrasena.value;
-      const confirmPass = form.confirmarContrasena.value;
-      if (pass !== confirmPass) {
+    event.preventDefault();
+    // Validar que contraseñas coincidan
+    const pass = form.contrasena.value;
+    const confirmPass = form.confirmarContrasena.value;
+    if (pass !== confirmPass) {
         alert('Las contraseñas no coinciden');
         return;
-      }
+    }
 
-      if (!form.checkValidity()) {
+    if (!form.checkValidity()) {
         form.reportValidity();
         return;
-      }
+    }
 
-      // Si pasa todas validaciones
-      mensajeExito.classList.remove('d-none');
-      form.reset();
-      comuna.innerHTML = '<option value="">-- Seleccione la comuna --</option>'; // reset comuna
-      region.focus();
+    // Mostrar mensaje de éxito
+    mensajeExito.classList.remove('d-none');
+    form.reset();
+    comuna.innerHTML = '<option value="">-- Seleccione la comuna --</option>'; // reset comuna
+    region.focus();
+
+    // Ocultar mensaje después de 3 segundos automáticamente
+    setTimeout(() => {
+        mensajeExito.classList.add('d-none');
+    }, 3000);
     });
   </script>
 </body>

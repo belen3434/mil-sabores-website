@@ -63,26 +63,33 @@
         <button type="submit" class="button">Iniciar Sesión</button>
       </form>
 
-      <div id="mensajeExito" class="success-msg" role="alert" style="margin-top: 1rem;">
-        🎉 ¡Inicio de sesión exitoso! 🎉
-      </div>
+        <div id="mensajeExito" class="success-msg d-none" role="alert" style="margin-top: 1rem;">
+          🎉 ¡Inicio de sesión exitoso! 🎉
+        </div>
+
     </div>
   </div>
 
-  <script>
-    const form = document.getElementById('loginForm');
-    const successMessage = document.getElementById('loginSuccess');
+<script>
+  const form = document.getElementById('loginForm');
+  const successMessage = document.getElementById('mensajeExito'); // Asegúrate el id coincide
 
-    form.addEventListener('submit', function(event) {
-      event.preventDefault();
-      if (form.checkValidity()) {
-        successMessage.classList.remove('d-none');
-        form.reset();
-      } else {
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    if (form.checkValidity()) {
+      successMessage.classList.remove('d-none');
+      form.reset();
+
+      // Ocultar automáticamente después de 3 segundos
+      setTimeout(() => {
         successMessage.classList.add('d-none');
-        form.reportValidity();
-      }
-    });
-  </script>
+      }, 3000);
+
+    } else {
+      successMessage.classList.add('d-none');
+      form.reportValidity();
+    }
+  });
+</script>
 </body>
 </html>
