@@ -148,3 +148,7 @@ button.button:focus {
     color: #FFF5E1; /* Crema pastel */
     outline: none;
   }
+
+.d-none {
+  display: none !important;
+}
