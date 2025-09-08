@@ -67,14 +67,19 @@
     form.addEventListener('submit', function(event) {
       event.preventDefault();
       if (form.checkValidity()) {
-        successMessage.classList.remove('d-none'); // Mostrar mensaje éxito
+        successMessage.classList.remove('d-none');
         form.reset();
+
+        // Ocultar el mensaje de éxito después de 3 segundos
+        setTimeout(() => {
+          successMessage.classList.add('d-none');
+        }, 3000);
+
       } else {
-        successMessage.classList.add('d-none'); // Ocultar mensaje
+        successMessage.classList.add('d-none');
         form.reportValidity();
       }
     });
-
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
