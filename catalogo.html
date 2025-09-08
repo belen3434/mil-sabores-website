@@ -10,42 +10,63 @@
       max-height: 400px;
       object-fit: cover;
     }
+    .card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 14px 30px rgba(0,0,0,.18);}
   </style>
+  
 </head>
 
 <body style="background-color:#FFF5E1; color: #5D4037; font-family: sans-serif;">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Pastelería 1000 Sabores</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
         </li>
+        
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">Catálogo</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
+        
         <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          <a class="nav-link" href="#">Tortas</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#">Postres</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#">Ofertas</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#">Nosotros</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contacto</a>
         </li>
       </ul>
+
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar"/>
+        <button class="btn btn-outline-success" type="submit">Buscar</button>
+      </form>
+    </div>
+  </div>
+</nav>
       </form>
     </div>
   </div>
@@ -69,7 +90,7 @@
             <h6 class="card-subtitle mb-2 text-muted">Tortas Cuadradas</h6>
             <p class="card-text">Deliciosa torta de chocolate con capas de ganache y un toque de avellanas.</p>
             <div class="mt-auto">
-              <span class="fw-bold text-primary">$45,000 CLP</span>
+              <span class="fw-bold text-primary">$45.000 CLP</span>
             </div>
           </div>
         </div>
@@ -79,12 +100,12 @@
         <div class="card h-100 shadow-sm border-0">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">Torta Cuadrada de Frutas</h5>
-            <img src="img/torta-fruta.jpg"/> 
+            <img src="img/fruta.jpg"/> 
             <br/>
             <h6 class="card-subtitle mb-2 text-muted">Tortas Cuadradas</h6>
             <p class="card-text">Una mezcla de frutas frescas y crema chantilly sobre un suave bizcocho de vainilla.</p>
             <div class="mt-auto">
-              <span class="fw-bold text-primary">$50,000 CLP</span>
+              <span class="fw-bold text-primary">$50.000 CLP</span>
             </div>
           </div>
         </div>
@@ -99,7 +120,7 @@
             <h6 class="card-subtitle mb-2 text-muted">Tortas Circulares</h6>
             <p class="card-text">Bizcocho de vainilla clásico relleno con crema pastelera y glaseado dulce.</p>
             <div class="mt-auto">
-              <span class="fw-bold text-primary">$40,000 CLP</span>
+              <span class="fw-bold text-primary">$40.000 CLP</span>
             </div>
           </div>
         </div>
@@ -114,7 +135,7 @@
             <h6 class="card-subtitle mb-2 text-muted">Tortas Circulares</h6>
             <p class="card-text">Torta tradicional chilena con manjar y nueces.</p>
             <div class="mt-auto">
-              <span class="fw-bold text-primary">$42,000 CLP</span>
+              <span class="fw-bold text-primary">$42.000 CLP</span>
             </div>
           </div>
         </div>
@@ -129,7 +150,7 @@
             <h6 class="card-subtitle mb-2 text-muted">Postres Individuales</h6>
             <p class="card-text">Cremoso postre individual hecho con chocolate de alta calidad.</p>
             <div class="mt-auto">
-              <span class="fw-bold text-primary">$5,000 CLP</span>
+              <span class="fw-bold text-primary">$5.000 CLP</span>
             </div>
           </div>
         </div>
@@ -144,7 +165,7 @@
             <h6 class="card-subtitle mb-2 text-muted">Postres Individuales</h6>
             <p class="card-text">Postre italiano con capas de café, mascarpone y cacao.</p>
             <div class="mt-auto">
-              <span class="fw-bold text-primary">$5,500 CLP</span>
+              <span class="fw-bold text-primary">$5.500 CLP</span>
             </div>
           </div>
         </div>
@@ -159,7 +180,7 @@
             <h6 class="card-subtitle mb-2 text-muted">Productos Sin Azúcar</h6>
             <p class="card-text">Endulzada naturalmente, ligera y deliciosa.</p>
             <div class="mt-auto">
-              <span class="fw-bold text-primary">$48,000 CLP</span>
+              <span class="fw-bold text-primary">$48.000 CLP</span>
             </div>
           </div>
         </div>
@@ -174,7 +195,7 @@
             <h6 class="card-subtitle mb-2 text-muted">Productos Sin Azúcar</h6>
             <p class="card-text">Suave, cremoso y perfecto para disfrutar sin culpa.</p>
             <div class="mt-auto">
-              <span class="fw-bold text-primary">$47,000 CLP</span>
+              <span class="fw-bold text-primary">$47.000 CLP</span>
             </div>
           </div>
         </div>
@@ -189,7 +210,7 @@
             <h6 class="card-subtitle mb-2 text-muted">Pastelería Tradicional</h6>
             <p class="card-text">Rellena de manzanas especiadas, perfecta para el desayuno.</p>
             <div class="mt-auto">
-              <span class="fw-bold text-primary">$3,000 CLP</span>
+              <span class="fw-bold text-primary">$3.000 CLP</span>
             </div>
           </div>
         </div>
@@ -204,7 +225,7 @@
             <h6 class="card-subtitle mb-2 text-muted">Pastelería Tradicional</h6>
             <p class="card-text">Tarta española de almendras, azúcar y huevos.</p>
             <div class="mt-auto">
-              <span class="fw-bold text-primary">$6,000 CLP</span>
+              <span class="fw-bold text-primary">$6.000 CLP</span>
             </div>
           </div>
         </div>
@@ -219,7 +240,7 @@
             <h6 class="card-subtitle mb-2 text-muted">Productos sin gluten</h6>
             <p class="card-text">Brownie denso y sabroso, sin gluten.</p>
             <div class="mt-auto">
-              <span class="fw-bold text-primary">$4,000 CLP</span>
+              <span class="fw-bold text-primary">$4.000 CLP</span>
             </div>
           </div>
         </div>
@@ -234,7 +255,7 @@
             <h6 class="card-subtitle mb-2 text-muted">Productos sin gluten</h6>
             <p class="card-text">Suave y esponjoso, ideal para acompañar comidas.</p>
             <div class="mt-auto">
-              <span class="fw-bold text-primary">$3,500 CLP</span>
+              <span class="fw-bold text-primary">$3.500 CLP</span>
             </div>
           </div>
         </div>
@@ -249,7 +270,7 @@
             <h6 class="card-subtitle mb-2 text-muted">Productos Vegana</h6>
             <p class="card-text">Torta de chocolate húmeda, sin ingredientes animales.</p>
             <div class="mt-auto">
-              <span class="fw-bold text-primary">$50,000 CLP</span>
+              <span class="fw-bold text-primary">$50.000 CLP</span>
             </div>
           </div>
         </div>
@@ -264,7 +285,7 @@
             <h6 class="card-subtitle mb-2 text-muted">Productos Vegana</h6>
             <p class="card-text">Crujientes, sabrosas y saludables.</p>
             <div class="mt-auto">
-              <span class="fw-bold text-primary">$4,500 CLP</span>
+              <span class="fw-bold text-primary">$4.500 CLP</span>
             </div>
           </div>
         </div>
@@ -274,12 +295,12 @@
         <div class="card h-100 shadow-sm border-0">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">Torta Especial de Cumpleaños</h5>
-             <img src="img/torta-especiaal.jpg"/> 
+             <img src="img/especial.jpg"/> 
             <br/>
             <h6 class="card-subtitle mb-2 text-muted">Tortas Especiales</h6>
             <p class="card-text">Personalizable con decoraciones y mensajes únicos.</p>
             <div class="mt-auto">
-              <span class="fw-bold text-primary">$55,000 CLP</span>
+              <span class="fw-bold text-primary">$55.000 CLP</span>
             </div>
           </div>
         </div>
@@ -289,12 +310,12 @@
         <div class="card h-100 shadow-sm border-0">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">Torta Especial de Boda</h5>
-             <img src="img/torta-boda.jpg"/> 
+             <img src="img/boda.jpg"/> 
             <br/>
             <h6 class="card-subtitle mb-2 text-muted">Tortas Especiales</h6>
             <p class="card-text">Elegante y deliciosa, ideal para bodas.</p>
             <div class="mt-auto">
-              <span class="fw-bold text-primary">$60,000 CLP</span>
+              <span class="fw-bold text-primary">$60.000 CLP</span>
             </div>
           </div>
         </div>
