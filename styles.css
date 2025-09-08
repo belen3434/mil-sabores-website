@@ -104,3 +104,37 @@ button.button:focus {
     font-weight: bold; /* Texto en negrita */
     text-align: center; /* Centrar texto horizontalmente */
 }
+
+  /* Lista horizontal para el nav */
+  .nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    gap: 1.5rem; /* Espacio entre links */
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Cada ítem del nav */
+  .nav-item {
+  }
+
+  /* Enlaces */
+  .nav-link {
+    color: #8B4513; /* Chocolate */
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.3rem 0.6rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+  }
+
+  /* Hover y foco en enlaces */
+  .nav-link:hover,
+  .nav-link:focus {
+    background-color: #8B4513; /* Chocolate */
+    color: #FFF5E1; /* Crema pastel */
+    outline: none;
+  }
