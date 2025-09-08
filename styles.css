@@ -1,0 +1,100 @@
+/* Fuentes importadas */
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Pacifico&display=swap');
+
+/* Fondo principal y tipografía general */
+body {
+    background-color: #FFF5E1; /* Crema Pastel para ambiente cálido */
+    color: #5D4037; /* Marrón Oscuro para texto principal */
+    font-family: 'Lato', sans-serif; /* Fuente principal moderna y legible */
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezados con fuente cursiva especial */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Pacifico', cursive; /* Fuente artística para títulos */
+    color: #5D4037; /* Marrón Oscuro para títulos */
+}
+
+/* Fondos para columnas específicas */
+.bg-rosa-suave {
+    background-color: #FFC0CB; /* Rosa Suave para acentos delicados */
+}
+
+.bg-chocolate {
+    background-color: #8B4513; /* Chocolate, cálido y tradicional */
+    color: #FFF5E1; /* Contraste cremoso para textos en chocolate */
+}
+
+.bg-crema-pastel {
+    background-color: #FFF5E1; /* Fondo crema pastel para áreas neutras */
+}
+
+/* Estilos para etiquetas de formularios */
+form label {
+    font-weight: 600; /* Negrita para mejor legibilidad */
+    margin-bottom: 0.3rem; /* Espacio pequeño debajo */
+    display: block;
+    color: #5D4037; /* Texto marrón oscuro */
+}
+
+/* Estilos para inputs y textarea */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    padding: 0.5rem; /* Espaciado interno cómodo */
+    border: 2px solid #8B4513; /* Borde color chocolate */
+    border-radius: 5px; /* Bordes redondeados */
+    font-family: 'Lato', sans-serif; /* Fuente legible */
+    font-size: 1rem;
+    color: #5D4037; /* Texto marrón oscuro */
+    background-color: #FFF5E1; /* Fondo crema */
+    margin-bottom: 1rem; /* Espacio entre campos */
+}
+
+/* Efecto al enfocar inputs y textarea */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none; /* Sin borde por defecto del navegador */
+    border-color: #FFC0CB; /* Destacado rosa suave */
+    background-color: #fff0f6; /* Fondo rosado muy claro */
+}
+
+/* Estilos para botón con clase .button */
+button.button {
+    background-color: #FFC0CB; /* Rosa suave para botones */
+    border: none; /* Sin borde */
+    color: #8B4513; /* Texto chocolate */
+    padding: 0.6rem 1.3rem; /* Espaciado cómodo */
+    font-weight: 600;
+    border-radius: 5px; /* Bordes suavizados */
+    cursor: pointer; /* Cursor indicativo de clic */
+    font-family: 'Lato', sans-serif;
+    transition: background-color 0.3s ease; /* Animación suave */
+    width: 100%; /* Botón a ancho completo */
+}
+
+/* Estado hover y foco del botón */
+button.button:hover,
+button.button:focus {
+    background-color: #8B4513; /* Fondo chocolate intenso */
+    color: #FFF5E1; /* Texto crema pastel */
+    outline: none; /* Sin contorno extra */
+}
+
+/* Estilo para mensajes de éxito */
+.alert-success {
+    border-radius: 5px;
+    background-color: #d4edda; /* Verde claro para éxito */
+    color: #155724; /* Verde oscuro para texto */
+    padding: 0.75rem 1rem;
+    margin-top: 1rem; /* Espacio superior */
+}
+
+/* Contenedor personalizado para limitar ancho y centrar */
+.container-custom {
+    max-width: 900px;
+    margin: 2rem auto;
+}
