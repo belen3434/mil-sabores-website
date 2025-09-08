@@ -56,24 +56,25 @@
       </div>
     </form>
     
-    <div id="mensajeExito" class="success-msg" role="alert" style="margin-top: 1rem;">
+    <div id="mensajeExito" class="success-msg d-none" role="alert" style="margin-top: 1rem;">
       🎉 Enviado Exitosamente 🎉
     </div>
 
   <script>
     const form = document.getElementById('contactForm');
-    const successMessage = document.getElementById('successMessage');
+    const successMessage = document.getElementById('mensajeExito'); // Aquí la corrección
 
     form.addEventListener('submit', function(event) {
       event.preventDefault();
       if (form.checkValidity()) {
-        successMessage.classList.remove('d-none');
+        successMessage.classList.remove('d-none'); // Mostrar mensaje éxito
         form.reset();
       } else {
-        successMessage.classList.add('d-none');
+        successMessage.classList.add('d-none'); // Ocultar mensaje
         form.reportValidity();
       }
     });
+
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
