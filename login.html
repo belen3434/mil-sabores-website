@@ -1,31 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Iniciar Sesión</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Iniciar Sesión</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Complemento para centrar vertical y horizontalmente */
+    .login-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #FFF5E1;
+      padding: 1rem;
+    }
+    .login-card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      padding: 2rem;
+      max-width: 400px;
+      width: 100%;
+      color: #5D4037;
+      font-family: 'Lato', sans-serif;
+    }
+    .text-center {
+      text-align: center;
+    }
+    .mb-4 {
+      margin-bottom: 1.5rem;
+    }
+  </style>
 </head>
 <body>
-  <div class="container d-flex justify-content-center align-items-center min-vh-100">
-    <div class="card p-4 shadow" style="max-width: 400px; width: 100%;">
-      <h2 class="mb-4 text-center">Iniciar Sesión</h2>
+  <div class="login-container">
+    <div class="login-card">
+      <h2 class="text-center mb-4" style="font-family: 'Pacifico', cursive;">Iniciar Sesión</h2>
       <form id="loginForm" novalidate>
-        <div class="mb-3">
-          <label for="usuario" class="form-label">Usuario</label>
-          <input type="text" class="form-control" id="usuario" placeholder="Ingresa tu usuario" required />
+        <label for="usuario">Usuario</label>
+        <input type="text" id="usuario" placeholder="Ingresa tu usuario" required />
+
+        <label for="contrasena">Contraseña</label>
+        <input type="password" id="contrasena" placeholder="Ingresa tu contraseña" required />
+
+        <div style="margin: 1rem 0;">
+          <input type="checkbox" id="recordarme" />
+          <label for="recordarme">Recordarme</label>
         </div>
-        <div class="mb-3">
-          <label for="contrasena" class="form-label">Contraseña</label>
-          <input type="password" class="form-control" id="contrasena" placeholder="Ingresa tu contraseña" required />
-        </div>
-        <div class="form-check mb-3">
-          <input type="checkbox" class="form-check-input" id="recordarme" />
-          <label class="form-check-label" for="recordarme">Recordarme</label>
-        </div>
-        <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+
+        <button type="submit" class="button">Iniciar Sesión</button>
       </form>
-      <div id="loginSuccess" class="alert alert-success mt-3 d-none" role="alert">
+
+      <div id="loginSuccess" class="alert alert-success d-none" role="alert" style="margin-top: 1rem;">
         ¡Inicio de sesión exitoso!
       </div>
     </div>
@@ -46,8 +73,5 @@
       }
     });
   </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
