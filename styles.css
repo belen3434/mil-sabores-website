@@ -100,3 +100,14 @@ button.button:focus {
     max-width: 900px;
     margin: 2rem auto;
 }
+
+.success-msg {
+    max-width: 900px;
+    margin: 1rem auto 0 auto;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    background-color: #d4edda; /* Verde claro para éxito */
+    color: #155724; /* Verde oscuro para texto */
+    font-weight: bold; /* Texto en negrita */
+    font-family: 'Lato', sans-serif;
+}
