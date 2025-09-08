@@ -86,15 +86,6 @@ button.button:focus {
     outline: none; /* Sin contorno extra */
 }
 
-/* Estilo para mensajes de éxito */
-.alert-success {
-    border-radius: 5px;
-    background-color: #d4edda; /* Verde claro para éxito */
-    color: #155724; /* Verde oscuro para texto */
-    padding: 0.75rem 1rem;
-    margin-top: 1rem; /* Espacio superior */
-}
-
 /* Contenedor personalizado para limitar ancho y centrar */
 .container-custom {
     max-width: 900px;
@@ -102,12 +93,14 @@ button.button:focus {
 }
 
 .success-msg {
-    max-width: 900px;
-    margin: 1rem auto 0 auto;
-    padding: 0.75rem 1rem;
-    border-radius: 5px;
-    background-color: #d4edda; /* Verde claro para éxito */
-    color: #155724; /* Verde oscuro para texto */
+    width: 100%; /* Como los inputs */
+    padding: 0.5rem; /* Espaciado interno */
+    border: 2px solid #8B4513; /* Borde color chocolate */
+    border-radius: 5px; /* Bordes redondeados */
+    font-family: 'Lato', sans-serif; /* Fuente legible */
+    font-size: 1rem;
+    color: #155724; /* Texto verde oscuro de éxito */
+    margin-bottom: 1rem; /* Separación respecto a otros elementos */
     font-weight: bold; /* Texto en negrita */
-    font-family: 'Lato', sans-serif;
+    text-align: center; /* Centrar texto horizontalmente */
 }
