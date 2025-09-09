@@ -8,22 +8,38 @@
      <link rel="stylesheet" href="styles.css">
 
 </head>
-<body>
-     <header>
-  <nav class="nav-container">
-    <ul class="nav-list">
-      <li class="nav-item"><a href="home.html" class="nav-link">Inicio</a></li>
-      <li class="nav-item"><a href="catalogo.html" class="nav-link">Catálogo</a></li>
-      <li class="nav-item"><a href="contacts.html" class="nav-link">Contacto</a></li>
-      <li class="nav-item"><a href="login.html" class="nav-link">Iniciar Sesión</a></li>
-      <li class="nav-item"><a href="registroUsuario.html" class="nav-link">Registrar Usuario</a></li>
-    </ul>
+<body class="body-registro">
+     <!-- ================= NAVBAR ================= -->
+  <nav class="navbar navbar-expand-lg" style="background-color:#FFC0CB;">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <a class="navbar-brand fw-bold" href="index.html" style="color:#8B4513;">
+        🍰 Pastelería 1000 Sabores
+      </a>
+      <!-- Botón hamburguesa para móviles -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="registro-usuario.html">Registro</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+          <li class="nav-item">
+            <a class="btn btn-sm btn-outline-dark" href="carrito.html">🛒 Carrito</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </nav>
-</header>
     <!-- 1. ponemos nuestra imagen como fondo 2. hace que la img de fondo cubra todo el tamaño
      3. evita que la img se repita varias veces, solo se muestra una vez
      4. Centra la img de fondo horiz. y vertic. 5. Mantiene elfondo quieto 6. Color de respaldo mientras se carga la img de fondo-->
-    <body class="body-registro">
+    
     
     <div class="container my-5"> <!-- aca creamos el contenedor principal paraenvolver el contenido -->
         <div class="text-center mb-4">
@@ -107,6 +123,10 @@
 
     </div>
 
+    <!-- ================= FOOTER ================= -->
+  <footer class="text-center p-4" style="background-color:#FFC0CB;">
+    © 2025 Pastelería 1000 Sabores — Todos los derechos reservados
+  </footer>
     <!-- 1.Busca el input que tiene el Id password, y lo guarda en la variable password 
      2.Hace lo mismo, pero con el input que tiene id="confirmPassword". -->
     <script>
@@ -119,6 +139,8 @@
                 confirmarPassword.setCustomValidity("")
             }
         });
+
+
     </script>
     
 </body>
