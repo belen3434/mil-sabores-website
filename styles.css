@@ -152,3 +152,14 @@ button.button:focus {
 .d-none {
   display: none !important;
 }
+
+body {
+  min-height: 100vh;       /* el body ocupa toda la altura */
+  display: flex;           /* activa flexbox */
+  flex-direction: column;  /* en columna: header, main, footer */
+}
+
+footer {
+  margin-top: auto;        /* empuja el footer al fondo */
+}
+
