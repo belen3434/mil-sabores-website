@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carrito - Pastelería 1000 Sabores</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Estilos del proyecto -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-crema-pastel">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-rosa-suave">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="index.html" style="color:#8B4513;">🍰 Pastelería 1000 Sabores</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="registroUsuario.html">Registro</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+          <li class="nav-item">
+            <!-- Badge estático para maqueta -->
+            <a class="btn btn-sm btn-outline-dark" href="carrito.html">
+              🛒 Carrito <span class="badge text-bg-dark">3</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-4">
+    <h1 class="mb-3">🛒 Carrito de compras</h1>
+    <p class="text-muted mb-4">Interfaz demostrativa (maqueta): sin funcionalidad, solo visual.</p>
+
+    <div class="row g-4">
+      <!-- Columna izquierda: items -->
+      <div class="col-lg-8">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <!-- Item 1 -->
+            <div class="row align-items-center g-3 pb-3 mb-3 border-bottom">
+              <div class="col-3 col-md-2">
+                <img src="img/torta_chocolate.jpg" alt="Torta de Chocolate"
+                     class="img-fluid rounded" style="object-fit:cover;aspect-ratio:1/1;">
+              </div>
+              <div class="col-9 col-md-6">
+                <h6 class="mb-1">Torta de Chocolate</h6>
+                <small class="text-muted">Código: TC001 • Tamaño: Mediana</small>
+              </div>
+              <div class="col-6 col-md-2">
+                <!-- Solo decorativo -->
+                <select class="form-select form-select-sm">
+                  <option>1</option>
+                  <option selected>2</option>
+                  <option>3</option>
+                </select>
+              </div>
+              <div class="col-6 col-md-2 text-md-end">
+                <strong>$45.000</strong>
+                <div><button class="btn btn-link p-0 text-danger">Quitar</button></div>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="row align-items-center g-3 pb-3 mb-3 border-bottom">
+              <div class="col-3 col-md-2">
+                <img src="img/torta-fruta.jpg" alt="Torta de Frutas"
+                     class="img-fluid rounded" style="object-fit:cover;aspect-ratio:1/1;">
+              </div>
+              <div class="col-9 col-md-6">
+                <h6 class="mb-1">Torta de Frutas</h6>
+                <small class="text-muted">Código: TC002 • Tamaño: Grande</small>
+              </div>
+              <div class="col-6 col-md-2">
+                <select class="form-select form-select-sm">
+                  <option selected>1</option><option>2</option><option>3</option>
+                </select>
+              </div>
+              <div class="col-6 col-md-2 text-md-end">
+                <strong>$50.000</strong>
+                <div><button class="btn btn-link p-0 text-danger">Quitar</button></div>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="row align-items-center g-3">
+              <div class="col-3 col-md-2">
+                <img src="img/torta-vainilla-circular.jpg" alt="Torta de Vainilla"
+                     class="img-fluid rounded" style="object-fit:cover;aspect-ratio:1/1;">
+              </div>
+              <div class="col-9 col-md-6">
+                <h6 class="mb-1">Torta de Vainilla</h6>
+                <small class="text-muted">Código: TT001 • Tamaño: Pequeña</small>
+              </div>
+              <div class="col-6 col-md-2">
+                <select class="form-select form-select-sm">
+                  <option>1</option><option selected>2</option><option>3</option>
+                </select>
+              </div>
+              <div class="col-6 col-md-2 text-md-end">
+                <strong>$40.000</strong>
+                <div><button class="btn btn-link p-0 text-danger">Quitar</button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna derecha: descuentos + totales -->
+      <div class="col-lg-4">
+        <!-- Descuentos (maqueta) -->
+        <div class="card shadow-sm mb-3">
+          <div class="card-body">
+            <h5 class="card-title mb-3">Descuentos</h5>
+
+            <div class="mb-3">
+              <label class="form-label">Fecha de nacimiento</label>
+              <input type="date" class="form-control" />
+              <div class="form-text">≥ 50 años: 50% de descuento.</div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Código de promoción</label>
+              <input type="text" class="form-control" placeholder="FELICES50" />
+              <div class="form-text">FELICES50: 10% de por vida.</div>
+            </div>
+
+            <div class="mb-0">
+              <label class="form-label">Correo institucional</label>
+              <input type="email" class="form-control" placeholder="nombre@duocuc.cl" />
+              <div class="form-text">Duoc + cumpleaños hoy: 1 torta gratis.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Totales (valores de ejemplo) -->
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title mb-3">Resumen</h5>
+            <div class="d-flex justify-content-between">
+              <span>Subtotal</span><strong>$135.000</strong>
+            </div>
+            <div class="d-flex justify-content-between text-success">
+              <span>Descuentos</span><strong>- $30.000</strong>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between fs-5">
+              <span>Total</span><strong>$105.000</strong>
+            </div>
+
+            <div class="d-grid gap-2 mt-3">
+              <button class="btn btn-outline-danger" disabled>Vaciar carrito</button>
+              <button class="btn btn-dark" disabled>Confirmar pedido</button>
+            </div>
+
+            <p class="text-muted small mt-3 mb-0">
+              * Interfaz demostrativa: los cálculos y botones son referenciales.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="text-center p-4 bg-rosa-suave mt-5">
+    © 2025 Pastelería 1000 Sabores — Todos los derechos reservados
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
