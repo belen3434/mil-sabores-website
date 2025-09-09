@@ -5,10 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro Usuario</title>
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-     <link rel="stylesheet" href="css/styles.css">
+     <link rel="stylesheet" href="styles.css">
 
 </head>
 <body>
+     <header>
+  <nav class="nav-container">
+    <ul class="nav-list">
+      <li class="nav-item"><a href="home.html" class="nav-link">Inicio</a></li>
+      <li class="nav-item"><a href="catalogo.html" class="nav-link">Catálogo</a></li>
+      <li class="nav-item"><a href="contacts.html" class="nav-link">Contacto</a></li>
+      <li class="nav-item"><a href="login.html" class="nav-link">Iniciar Sesión</a></li>
+      <li class="nav-item"><a href="registroUsuario.html" class="nav-link">Registrar Usuario</a></li>
+    </ul>
+  </nav>
+</header>
     <!-- 1. ponemos nuestra imagen como fondo 2. hace que la img de fondo cubra todo el tamaño
      3. evita que la img se repita varias veces, solo se muestra una vez
      4. Centra la img de fondo horiz. y vertic. 5. Mantiene elfondo quieto 6. Color de respaldo mientras se carga la img de fondo-->
@@ -16,7 +27,7 @@
     
     <div class="container my-5"> <!-- aca creamos el contenedor principal paraenvolver el contenido -->
         <div class="text-center mb-4">
-            <img src="images/logo-reg.png" width="100">
+            <img src="img/logo-reg.png" width="100">
         </div>
         
         <h2 class="text-center mb-4" style="color: #594621;">Registro de Usuario</h2><!-- centro el texto, le agrego color al texto y agrego titulo dentro de la caja -->
@@ -48,12 +59,12 @@
 
             <div class="mb-3">
                 <label for="password">Contraseña</label>
-                <input type="password" class="form-control" id="password" required>
+                <input type="password" class="form-control" id="password" placeholder="4 a 10 caracteres" required>
             </div>
 
             <div class="mb-3">
                 <label for="confirmarPassword">Confirmar Contraseña</label>
-                <input type="password" class="form-control" id="confirmarPassword" required>
+                <input type="password" class="form-control" id="confirmarPassword"placeholder="Repita Contraseña" required>
             </div>
 
             <div class="mb-3">
