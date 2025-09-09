@@ -39,18 +39,33 @@
 
 <body style="background-color:#FFF5E1; color: #5D4037; font-family: sans-serif;">
 
-  <!-- Reemplazo del nav Bootstrap original por nav personalizado adaptado al style.css -->
-  <header>
-    <nav class="nav-container" style="max-width: 900px; margin: 1rem auto;">
-      <ul class="nav-list" style="list-style: none; display: flex; justify-content: center; gap: 1.5rem; padding: 0; margin: 0;">
-        <li class="nav-item"><a href="home.html" class="nav-link" style="color:#8B4513; font-family: 'Lato', sans-serif; font-weight:600; font-size:1rem; text-decoration:none; padding:0.3rem 0.6rem; border-radius:5px; transition: background-color 0.3s ease, color 0.3s ease;">Inicio</a></li>
-        <li class="nav-item"><a href="catalogo.html" class="nav-link" style="color:#8B4513; font-family: 'Lato', sans-serif; font-weight:600; font-size:1rem; text-decoration:none; padding:0.3rem 0.6rem; border-radius:5px; transition: background-color 0.3s ease, color 0.3s ease;">Catálogo</a></li>
-        <li class="nav-item"><a href="contacts.html" class="nav-link" style="color:#8B4513; font-family: 'Lato', sans-serif; font-weight:600; font-size:1rem; text-decoration:none; padding:0.3rem 0.6rem; border-radius:5px; transition: background-color 0.3s ease, color 0.3s ease;">Contacto</a></li>
-        <li class="nav-item"><a href="login.html" class="nav-link" style="color:#8B4513; font-family: 'Lato', sans-serif; font-weight:600; font-size:1rem; text-decoration:none; padding:0.3rem 0.6rem; border-radius:5px; transition: background-color 0.3s ease, color 0.3s ease;">Iniciar Sesión</a></li>
-        <li class="nav-item"><a href="registroUsuario.html" class="nav-link" style="color:#8B4513; font-family: 'Lato', sans-serif; font-weight:600; font-size:1rem; text-decoration:none; padding:0.3rem 0.6rem; border-radius:5px; transition: background-color 0.3s ease, color 0.3s ease;">Registrar Usuario</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar navbar-expand-lg" style="background-color:#FFC0CB;">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <a class="navbar-brand fw-bold" href="index.html" style="color:#8B4513;">
+        🍰 Pastelería 1000 Sabores
+      </a>
+      <!-- Botón hamburguesa para móviles -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="registroUsuario.html">Registro</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+          <li class="nav-item">
+            <a class="btn btn-sm btn-outline-dark" href="carrito.html">🛒 Carrito</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
   <header class="py-4 text-center">
     <h1 style="font-family: 'Pacifico', cursive;">🍰 Catálogo de Productos 🍰</h1>
@@ -324,6 +339,9 @@
      <p class="text-muted">❤️¡Celebra la dulzura de la vida con Pastelería 1000 Sabores!❤️</p>
     © 2025 Pastelería 1000 Sabores
   </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
