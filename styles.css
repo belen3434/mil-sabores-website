@@ -41,6 +41,7 @@ form label {
 /* Estilos para inputs y textarea */
 input[type="text"],
 input[type="email"],
+input[type="password"],
 textarea {
     width: 100%; /* Ocupa todo el ancho del contenedor */
     padding: 0.5rem; /* Espaciado interno cómodo */
@@ -56,6 +57,7 @@ textarea {
 /* Efecto al enfocar inputs y textarea */
 input[type="text"]:focus,
 input[type="email"]:focus,
+input[type="password"]:focus,
 textarea:focus {
     outline: none; /* Sin borde por defecto del navegador */
     border-color: #FFC0CB; /* Destacado rosa suave */
@@ -84,17 +86,69 @@ button.button:focus {
     outline: none; /* Sin contorno extra */
 }
 
-/* Estilo para mensajes de éxito */
-.alert-success {
-    border-radius: 5px;
-    background-color: #d4edda; /* Verde claro para éxito */
-    color: #155724; /* Verde oscuro para texto */
-    padding: 0.75rem 1rem;
-    margin-top: 1rem; /* Espacio superior */
-}
-
 /* Contenedor personalizado para limitar ancho y centrar */
 .container-custom {
     max-width: 900px;
     margin: 2rem auto;
+}
+
+.success-msg {
+    width: 100%; /* Como los inputs */
+    padding: 0.5rem; /* Espaciado interno */
+    border: 2px solid #8B4513; /* Borde color chocolate */
+    border-radius: 5px; /* Bordes redondeados */
+    font-family: 'Lato', sans-serif; /* Fuente legible */
+    font-size: 1rem;
+    color: #155724; /* Texto verde oscuro de éxito */
+    margin-bottom: 1rem; /* Separación respecto a otros elementos */
+    font-weight: bold; /* Texto en negrita */
+    text-align: center; /* Centrar texto horizontalmente */
+}
+
+
+  /* Contenedor del nav */
+  .nav-container {
+    background-color: #FFC0CB; /* Rosa suave */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    max-width: 900px;
+    margin: 1rem auto;
+  }
+
+  /* Lista horizontal para el nav */
+  .nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    gap: 1.5rem; /* Espacio entre links */
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Cada ítem del nav */
+  .nav-item {
+  }
+
+  /* Enlaces */
+  .nav-link {
+    color: #8B4513; /* Chocolate */
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.3rem 0.6rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+  }
+
+  /* Hover y foco en enlaces */
+  .nav-link:hover,
+  .nav-link:focus {
+    background-color: #8B4513; /* Chocolate */
+    color: #FFF5E1; /* Crema pastel */
+    outline: none;
+  }
+
+.d-none {
+  display: none !important;
 }
