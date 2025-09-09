@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Usuario</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+     <link rel="stylesheet" href="styles.css">
+
+</head>
+<body class="body-registro">
+     <!-- ================= NAVBAR ================= -->
+  <nav class="navbar navbar-expand-lg" style="background-color:#FFC0CB;">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <a class="navbar-brand fw-bold" href="index.html" style="color:#8B4513;">
+        🍰 Pastelería 1000 Sabores
+      </a>
+      <!-- Botón hamburguesa para móviles -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="registro-usuario.html">Registro</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+          <li class="nav-item">
+            <a class="btn btn-sm btn-outline-dark" href="carrito.html">🛒 Carrito</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <!-- 1. ponemos nuestra imagen como fondo 2. hace que la img de fondo cubra todo el tamaño
+     3. evita que la img se repita varias veces, solo se muestra una vez
+     4. Centra la img de fondo horiz. y vertic. 5. Mantiene elfondo quieto 6. Color de respaldo mientras se carga la img de fondo-->
+    
+    
+    <div class="container my-5"> <!-- aca creamos el contenedor principal paraenvolver el contenido -->
+        <div class="text-center mb-4">
+            <img src="img/logo-reg.png" width="100">
+        </div>
+        
+        <h2 class="text-center mb-4" style="color: #594621;">Registro de Usuario</h2><!-- centro el texto, le agrego color al texto y agrego titulo dentro de la caja -->
+
+        <div class="card shadow p-4"style="background-color: #white; border-radius: 15px; min-height:600px"> <!--crea una tarjeta, color rosado y bordes redondeados  -->
+           <form>
+            
+
+            <div class="mb-3">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Ej: Maria Jose" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="apellido">Apellidos</label>
+                <input type="text" class="form-control" id="apellido" placeholder="Ej: Vasquez Araya" required>
+            
+                <div class="mb-3">
+                <label for="run">Run</label>
+                <input type="text" class="form-control" id="run" placeholder="Ej: 12345678-9">
+            </div>
+
+            </div>
+
+            <div class="mb-3">
+                <label for="correo">Correo</label>
+                <input type="text" class="form-control" id="correo" placeholder="Ej: mariav@duocuc.cl">
+            </div>
+
+            <div class="mb-3">
+                <label for="password">Contraseña</label>
+                <input type="password" class="form-control" id="password" placeholder="4 a 10 caracteres" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="confirmarPassword">Confirmar Contraseña</label>
+                <input type="password" class="form-control" id="confirmarPassword"placeholder="Repita Contraseña" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="fecha-nacimiento">Fecha Nacimiento</label>
+                <input type="date" class="form-control" id="fecha-nacimiento" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="direccion">Dirección</label>
+                <input type="text" class="form-control" id="direccion" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="comuna">Comuna</label>
+                <input type="text" class="form-control" id="comuna" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="tipo-usuario">Tipo de Usuario</label>
+                <select class="form-control" id="tipo-usuario" required>
+                <option value="">Seleccion una opción</option>
+                <option value="cliente">Cliente</option>
+                <option value="admin">Administrador</option>
+
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="codigo-dcto">Codigo de descuento</label>
+                <input type="text" class="form-control" id="codigo-dcto" required>
+            </div>
+
+            <div class="d-grid">
+                <button type="submit" class="btn" style="background-color:#d9bc83;">Registrarse </button>
+            </div>
+
+           </form> 
+            
+        </div>
+
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+  <footer class="text-center p-4" style="background-color:#FFC0CB;">
+    © 2025 Pastelería 1000 Sabores — Todos los derechos reservados
+  </footer>
+    <!-- 1.Busca el input que tiene el Id password, y lo guarda en la variable password 
+     2.Hace lo mismo, pero con el input que tiene id="confirmPassword". -->
+    <script>
+        const password = document.getElementById("password");
+        const confirmarPassword = document.getElementById("confirmarPassword");
+        confirmarPassword.addEventListener("input",()=>{
+            if(password.value !== confirmarPassword.value){
+                confirmarPassword.setCustomValidity("Las contraseñas no coinciden")
+            } else {
+                confirmarPassword.setCustomValidity("")
+            }
+        });
+
+
+    </script>
+    
+</body>
+</html>
