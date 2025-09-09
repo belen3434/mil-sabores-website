@@ -1,11 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registro de Usuario</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    
+    <header>
+  <nav class="nav-container">
+    <ul class="nav-list">
+      <li class="nav-item"><a href="home.html" class="nav-link">Inicio</a></li>
+      <li class="nav-item"><a href="catalogo.html" class="nav-link">Catálogo</a></li>
+      <li class="nav-item"><a href="contacts.html" class="nav-link">Contacto</a></li>
+      <li class="nav-item"><a href="login.html" class="nav-link">Iniciar Sesión</a></li>
+      <li class="nav-item"><a href="registroUsuario.html" class="nav-link">Registrar Usuario</a></li>
+    </ul>
+  </nav>
+</header>
+  <main class="container-custom bg-crema-pastel p-4">
+    <header>
+      <h1>Registro de Usuario</h1>
+    </header>
+
+    <form id="registroForm" novalidate>
+      <section>
+        <label for="nombreCompleto">Nombre Completo <sup>*</sup></label>
+        <input type="text" id="nombreCompleto" name="nombreCompleto" maxlength="100" placeholder="Ingrese su nombre completo" required />
+      </section>
+
+      <section>
+        <label for="correo">Correo Electrónico <sup>*</sup></label>
+        <input type="email" id="correo" name="correo" maxlength="100" placeholder="ejemplo@dominio.com" pattern="^[a-z0-9._%+-]+@(duoc\.cl|profesor\.duoc\.cl|gmail\.com)$" required />
+        <small>Solo se permiten correos @duoc.cl, @profesor.duoc.cl, @gmail.com</small>
+      </section>
+<p></p>
+      <section>
+        <label for="contrasena">Contraseña <sup>*</sup></label>
+        <input type="password" id="contrasena" name="contrasena" minlength="4" maxlength="10" placeholder="4 a 10 caracteres" required />
+      </section>
+
+      <section>
+        <label for="confirmarContrasena">Confirmar Contraseña <sup>*</sup></label>
+        <input type="password" id="confirmarContrasena" name="confirmarContrasena" minlength="4" maxlength="10" placeholder="Repita la contraseña" required />
+      </section>
+
+      <section>
+        <label for="telefono">Teléfono (opcional)</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Opcional" />
+      </section>
+<p></p>
+      <section>
+        <label for="region">Región <sup>*</sup></label>
+        <select id="region" name="region" required>
+          <option value="">-- Seleccione la región --</option>
+          <option value="RM">Región Metropolitana de Santiago</option>
+          <option value="Linares">Linares</option>
+          <option value="Araucania">Región de la Araucanía</option>
+          <option value="Nuble">Región de Ñuble</option>
+        </select>
+      </section>
+<p></p>
+      <section>
+        <label for="comuna">Comuna <sup>*</sup></label>
+        <select id="comuna" name="comuna" required>
+          <option value="">-- Seleccione la comuna --</option>
+          <!-- Las opciones cambiarán dinámicamente según región en validación JS -->
+        </select>
+      </section>
+<p></p>
+      <button type="submit" class="button">Registrar</button>
+    </form>
+
+    <div id="mensajeExito" class="success-msg d-none" role="alert" style="margin-top: 1rem;">
+    🎉 Registro realizado con éxito 🎉
+    </div>
+  </main>
+
+  <script>
+    // Esperar que el DOM esté cargado para ocultar mensaje si está visible por algún motivo
+    document.addEventListener('DOMContentLoaded', () => {
+    const mensajeExito = document.getElementById('mensajeExito');
+    if (mensajeExito) {
+        mensajeExito.classList.add('d-none'); // Ocultar mensaje al cargar la página
+    }
+    });
+
+    // Referencias
+    const form = document.getElementById('registroForm');
+    const mensajeExito = document.getElementById('mensajeExito');
+    const region = document.getElementById('region');
+    const comuna = document.getElementById('comuna');
+
+    // Mapa de comunas por región simple para ejemplo
+    const comunasPorRegion = {
+    'RM': ['Santiago', 'Puente Alto', 'Las Condes'],
+    'Linares': ['Colbún', 'Longaví', 'Villa Alegre'],
+    'Araucania': ['Temuco', 'Villarrica', 'Pucón'],
+    'Nuble': ['Chillán', 'Bulnes', 'Yungay']
+    };
+
+    // Cambiar opciones comuna según región
+    region.addEventListener('change', () => {
+    const seleccion = region.value;
+    comuna.innerHTML = '<option value="">-- Seleccione la comuna --</option>';
+    if (comunasPorRegion[seleccion]) {
+        comunasPorRegion[seleccion].forEach(c => {
+        const option = document.createElement('option');
+        option.value = c;
+        option.textContent = c;
+        comuna.appendChild(option);
+        });
+    }
+    });
+
+    // Validación del formulario y manejo del mensaje de éxito
+    form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    // Validar que contraseñas coincidan
+    const pass = form.contrasena.value;
+    const confirmPass = form.confirmarContrasena.value;
+    if (pass !== confirmPass) {
+        alert('Las contraseñas no coinciden');
+        return;
+    }
+
+    if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+    }
+
+    // Mostrar mensaje de éxito
+    mensajeExito.classList.remove('d-none');
+    form.reset();
+    comuna.innerHTML = '<option value="">-- Seleccione la comuna --</option>'; // reset comuna
+    region.focus();
+
+    // Ocultar mensaje después de 3 segundos automáticamente
+    setTimeout(() => {
+        mensajeExito.classList.add('d-none');
+    }, 3000);
+    });
+  </script>
 </body>
 </html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Iniciar Sesión</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Complemento para centrar vertical y horizontalmente */
+    .login-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #FFF5E1;
+      padding: 1rem;
+    }
+    .login-card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      padding: 2rem;
+      max-width: 400px;
+      width: 100%;
+      color: #5D4037;
+      font-family: 'Lato', sans-serif;
+    }
+    .text-center {
+      text-align: center;
+    }
+    .mb-4 {
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+  <nav class="nav-container">
+    <ul class="nav-list">
+      <li class="nav-item"><a href="home.html" class="nav-link">Inicio</a></li>
+      <li class="nav-item"><a href="catalogo.html" class="nav-link">Catálogo</a></li>
+      <li class="nav-item"><a href="contacts.html" class="nav-link">Contacto</a></li>
+      <li class="nav-item"><a href="login.html" class="nav-link">Iniciar Sesión</a></li>
+      <li class="nav-item"><a href="registroUsuario.html" class="nav-link">Registrar Usuario</a></li>
+    </ul>
+  </nav>
+</header>
+  <div class="login-container">
+    <div class="login-card">
+      <h2 class="text-center mb-4" style="font-family: 'Pacifico', cursive;">Iniciar Sesión</h2>
+      <form id="loginForm" novalidate>
+        <label for="usuario">Usuario</label>
+        <input type="text" id="usuario" placeholder="Ingresa tu usuario" required />
+
+        <label for="contrasena">Contraseña</label>
+        <input type="password" id="contrasena" placeholder="Ingresa tu contraseña" required />
+
+        <div style="margin: 1rem 0;">
+          <input type="checkbox" id="recordarme" />
+          <label for="recordarme">Recordarme</label>
+        </div>
+
+        <button type="submit" class="button">Iniciar Sesión</button>
+      </form>
+
+        <div id="mensajeExito" class="success-msg d-none" role="alert" style="margin-top: 1rem;">
+          🎉 ¡Inicio de sesión exitoso! 🎉
+        </div>
+
+    </div>
+  </div>
+
+<script>
+  const form = document.getElementById('loginForm');
+  const successMessage = document.getElementById('mensajeExito'); // Asegúrate el id coincide
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    if (form.checkValidity()) {
+      successMessage.classList.remove('d-none');
+      form.reset();
+
+      // Ocultar automáticamente después de 3 segundos
+      setTimeout(() => {
+        successMessage.classList.add('d-none');
+      }, 3000);
+
+    } else {
+      successMessage.classList.add('d-none');
+      form.reportValidity();
+    }
+  });
+</script>
+</body>
+</html>
