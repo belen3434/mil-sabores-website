@@ -8,19 +8,35 @@
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-  <nav class="nav-container">
-    <ul class="nav-list">
-      <li class="nav-item"><a href="home.html" class="nav-link">Inicio</a></li>
-      <li class="nav-item"><a href="catalogo.html" class="nav-link">Catálogo</a></li>
-      <li class="nav-item"><a href="contacts.html" class="nav-link">Contacto</a></li>
-      <li class="nav-item"><a href="login.html" class="nav-link">Iniciar Sesión</a></li>
-      <li class="nav-item"><a href="registroUsuario.html" class="nav-link">Registrar Usuario</a></li>
-    </ul>
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar navbar-expand-lg" style="background-color:#FFC0CB;">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <a class="navbar-brand fw-bold" href="index.html" style="color:#8B4513;">
+        🍰 Pastelería 1000 Sabores
+      </a>
+      <!-- Botón hamburguesa para móviles -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="registroUsuario.html">Registro</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+          <li class="nav-item">
+            <a class="btn btn-sm btn-outline-dark" href="carrito.html">🛒 Carrito</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </nav>
-</header>
 
-  <div class="container container-custom my-5">
+  <div class="container p-4 my-5">
     <div class="row">
       <div class="col-12">
         <h1>Contacta con Nosotros</h1>
@@ -59,6 +75,11 @@
     <div id="mensajeExito" class="success-msg d-none" role="alert" style="margin-top: 1rem;">
       🎉 Enviado Exitosamente 🎉
     </div>
+  </div>
+    <!-- ================= FOOTER ================= -->
+  <footer class="text-center p-4" style="background-color:#FFC0CB;">
+    © 2025 Pastelería 1000 Sabores — Todos los derechos reservados
+  </footer>
 
   <script>
     const form = document.getElementById('contactForm');
@@ -80,6 +101,7 @@
         form.reportValidity();
       }
     });
+
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
